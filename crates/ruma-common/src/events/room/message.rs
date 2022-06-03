@@ -111,8 +111,8 @@ impl RoomMessageEventContent {
     /// [`.into_full_event()`][crate::events::OriginalSyncMessageLikeEvent::into_full_event].
     ///
     /// It is recommended to enable the `sanitize` feature when using this method as this will
-    /// avoid to have deeply nested [rich reply fallbacks] in chains of replies. This uses
-    /// [`sanitize_html()`] internally, with `remove_reply_fallback` set to `true`.
+    /// clean up nested [rich reply fallbacks] in chains of replies. This uses [`sanitize_html()`]
+    /// internally, with [`RemoveReplyFallback::Yes`].
     ///
     /// [rich reply fallbacks]: https://spec.matrix.org/v1.2/client-server-api/#fallbacks-for-rich-replies
     pub fn text_reply_plain(
@@ -139,8 +139,8 @@ impl RoomMessageEventContent {
     /// [`.into_full_event()`][crate::events::OriginalSyncMessageLikeEvent::into_full_event].
     ///
     /// It is recommended to enable the `sanitize` feature when using this method as this will
-    /// avoid to have deeply nested [rich reply fallbacks] in chains of replies. This uses
-    /// [`sanitize_html()`] internally, with `remove_reply_fallback` set to `true`.
+    /// clean up nested [rich reply fallbacks] in chains of replies. This uses [`sanitize_html()`]
+    /// internally, with [`RemoveReplyFallback::Yes`].
     ///
     /// [rich reply fallbacks]: https://spec.matrix.org/v1.2/client-server-api/#fallbacks-for-rich-replies
     pub fn text_reply_html(
@@ -167,8 +167,8 @@ impl RoomMessageEventContent {
     /// [`.into_full_event()`][crate::events::OriginalSyncMessageLikeEvent::into_full_event].
     ///
     /// It is recommended to enable the `sanitize` feature when using this method as this will
-    /// avoid to have deeply nested [rich reply fallbacks] in chains of replies. This uses
-    /// [`sanitize_html()`] internally, with `remove_reply_fallback` set to `true`.
+    /// clean up nested [rich reply fallbacks] in chains of replies. This uses [`sanitize_html()`]
+    /// internally, with [`RemoveReplyFallback::Yes`].
     ///
     /// [rich reply fallbacks]: https://spec.matrix.org/v1.2/client-server-api/#fallbacks-for-rich-replies
     pub fn notice_reply_plain(
@@ -195,8 +195,8 @@ impl RoomMessageEventContent {
     /// [`.into_full_event()`][crate::events::OriginalSyncMessageLikeEvent::into_full_event].
     ///
     /// It is recommended to enable the `sanitize` feature when using this method as this will
-    /// avoid to have deeply nested [rich reply fallbacks] in chains of replies. This uses
-    /// [`sanitize_html()`] internally, with `remove_reply_fallback` set to `true`.
+    /// clean up nested [rich reply fallbacks] in chains of replies. This uses [`sanitize_html()`]
+    /// internally, with [`RemoveReplyFallback::Yes`].
     ///
     /// [rich reply fallbacks]: https://spec.matrix.org/v1.2/client-server-api/#fallbacks-for-rich-replies
     pub fn notice_reply_html(
@@ -220,8 +220,8 @@ impl RoomMessageEventContent {
     /// If `message` is a text or notice message, it is modified to include the rich reply fallback.
     ///
     /// It is recommended to enable the `sanitize` feature when using this method as this will
-    /// avoid to have deeply nested [rich reply fallbacks] in chains of replies. This uses
-    /// [`sanitize_html()`] internally, with `remove_reply_fallback` set to `true`.
+    /// clean up nested [rich reply fallbacks] in chains of replies. This uses [`sanitize_html()`]
+    /// internally, with [`RemoveReplyFallback::Yes`].
     ///
     /// [rich reply fallbacks]: https://spec.matrix.org/v1.2/client-server-api/#fallbacks-for-rich-replies
     #[cfg(feature = "unstable-msc3440")]
@@ -277,8 +277,8 @@ impl RoomMessageEventContent {
     /// If `message` is a text or notice message, it is modified to include the rich reply fallback.
     ///
     /// It is recommended to enable the `sanitize` feature when using this method as this will
-    /// avoid to have deeply nested [rich reply fallbacks] in chains of replies. This uses
-    /// [`sanitize_html()`] internally, with `remove_reply_fallback` set to `true`.
+    /// clean up nested [rich reply fallbacks] in chains of replies. This uses [`sanitize_html()`]
+    /// internally, with [`RemoveReplyFallback::Yes`].
     ///
     /// [rich reply fallbacks]: https://spec.matrix.org/v1.2/client-server-api/#fallbacks-for-rich-replies
     #[cfg(feature = "unstable-msc3440")]
