@@ -27,6 +27,8 @@ Improvements:
 * Add unstable support for polls (MSC3381)
 * Add unstable support for Improved Signalling for 1:1 VoIP (MSC2746)
 * Add support for knocking in `events::room::member::MembershipChange`
+* Add methods to sanitize messages according to the spec behind the `sanitize` feature
+  * Can also remove rich reply fallbacks
 
 # 0.9.2
 

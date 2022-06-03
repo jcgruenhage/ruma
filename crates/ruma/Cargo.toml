@@ -60,6 +60,7 @@ js = ["ruma-common/js"]
 # Convenience features
 rand = ["ruma-common/rand"]
 markdown = ["ruma-common/markdown"]
+sanitize = ["ruma-common/sanitize"]
 
 # Everything except compat, js and unstable features
 full = [
@@ -76,6 +77,7 @@ full = [
     "push-gateway-api",
     "rand",
     "markdown",
+    "sanitize",
 ]
 
 # Increase compatibility with other parts of the Matrix ecosystem, at the
