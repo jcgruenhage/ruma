@@ -250,11 +250,14 @@ jobs:
       - name: Build docs
         run: target/debug/xtask doc --deny-warnings
 
+      - name: Create zip
+        run: cd target/doc && zip -r docs.zip . && cd ../.. && mv target/doc/docs.zip .
+
       - name: Deploy PR preview
         if: ${{ github.event_name == 'pull_request' }}
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: target/doc
+          publish-dir: docs.zip
           enable-pull-request-comment: false
           enable-commit-comment: false
           alias: pr-${{ github.event.number }}
