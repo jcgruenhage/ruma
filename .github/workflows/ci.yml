@@ -254,10 +254,9 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         uses: nwtgck/actions-netlify@v1.2
         with:
-          publish-dir: './target/doc'
+          publish-dir: target/doc
           enable-pull-request-comment: false
           enable-commit-comment: false
-          enable-commit-status: false
           alias: pr-${{ github.event.number }}
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
