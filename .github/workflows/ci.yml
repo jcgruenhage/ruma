@@ -251,10 +251,7 @@ jobs:
         run: target/debug/xtask doc --deny-warnings
       
       - name: Check files
-        run:
-          - ls .
-          - ls target
-          - ls target/doc
+        run: ls . && ls target && ls target/doc
 
       - name: Deploy PR preview
         if: ${{ github.event_name == 'pull_request' }}
