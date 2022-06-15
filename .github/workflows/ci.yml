@@ -279,7 +279,7 @@ jobs:
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          folder: target/doc
+          folder: './target/doc'
           repository-name: ruma/docs.ruma.io
           branch: main
           ssh-key: ${{ secrets.DOCS_DEPLOY_KEY }}
