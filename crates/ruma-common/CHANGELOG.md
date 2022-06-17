@@ -16,6 +16,8 @@ Breaking changes:
 * Remove `RoomName` / `OwnedRoomName` and replace usages with `str` / `String`
   * Room name size limits were never enforced by servers
     ([Spec change removing the size limit][spec])
+* Move `CanonicalJson`, `CanonicalJsonObject` and `CanonicalJsonError` out of
+  the `serde` module and behind the cargo feature flag `canonical-json`
 
 [spec]: https://github.com/matrix-org/matrix-spec-proposals/pull/3669
 
